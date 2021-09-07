@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<body>
+
+<h1 style="font-size:25px"> This file is currently active: </h1>
+<p> {{ current_file }} </p>
+<form method=post action="">
+    <h1 style="font-size:25px"><label for="file"> Choose a file to activate:</label></h1>
+    <select name="file" id="file">
+    {%- for item in tree.children recursive %}
+        <option value="{{ item.name }}">{{ item.name }}</option>   
+        {%- if item.children -%}
+            <ul>{{ loop(item.children) }}</ul>
+        {%- endif %}</li>
+    {%- endfor %}
+    </select>
+    <br><br>
+    <h1 style="font-size:25px"> Click the "Submit" button to make this the active write file </h1>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
