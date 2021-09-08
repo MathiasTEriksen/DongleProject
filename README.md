@@ -8,6 +8,7 @@ The PSU boards on the PCB boardstacks rev6 and earlier use a PDI interface to pr
 
 <img
 src="images/Prog_Input(OLD).png"
+style="width:200px;"
 />
 
 
