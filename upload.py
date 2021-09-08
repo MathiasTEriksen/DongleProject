@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 '''
 this file upload.py creates a web server which is used to upload files to the
 pi that can later be used to program PSU boards using the button.py script.

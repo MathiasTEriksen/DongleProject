@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 '''
 this file contains the python script 'button.py', which listens for physical
 button press, and then programs the microcontroller using pdi interface.
