@@ -19,7 +19,7 @@ Some changes were made to this source code in order to debug and make it work fo
 
 Updated source code: https://github.com/MSNetrom/rpipdi
 
-Using this source code, all you have to do is enter the rpipdi folder and use the sudo ./rpipdi command to excecute write and erase commands. When using this command, always -c and -d values must be entered. These are the values for which GPIO pins correspond clock and data, in our case -c is 26 and -d 21.
+Using this source code, all you have to do is enter the rpipdi folder and use the sudo ./rpipdi command to excecute write and erase commands. When using this command, always -c and -d values must be entered. These are the values for which GPIO pins correspond clock and data, in our case -c is 26 and -d 21. NOTE: libcm2835 library must be installed for this program to function. 
 
 ## upload.py
 
