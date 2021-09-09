@@ -11,7 +11,7 @@ src="images/Prog_Input(OLD).png"
 style="width:400px;"
 />
 
-In order to comminicate with the microcontroller from the pi, we use the GPIO pins. For this purpose, the pin named PDI is going to be used for DATA and the pin named RESET is going to be used as CLOCK. In this case, we use the 3v3 output from the pi and one of the ground pins on the pi in order to power the PSU board while connected. More importantly, GPIO pin 26 is used as for the CLOCK, and GPIO pin 21 is used for DATA. using these connections, we can use the PDI interface to program the microcontroller. In order to interface with the microcontroller, a seperate github project was used as the source code. For reference, the flash page size for this microcontroller is 128 words and the flash base address is 0x008000000.
+In order to comminicate with the microcontroller from the pi, we use the GPIO pins. For this purpose, the pin named PDI is going to be connected to DATA and the pin named RESET is going to be connected to and used as the CLOCK.  In this case, we use the 3v3 output from the pi and one of the ground pins on the pi in order to power the PSU board while connected. More importantly, GPIO pin 26 is used as for the CLOCK, and GPIO pin 21 is used for DATA. using these connections, we can use the PDI interface to program the microcontroller. In order to interface with the microcontroller, a seperate github project was used as the source code. For reference, the flash page size for this microcontroller is 128 words and the flash base address is 0x008000000.
 
 Source code for PDI interface: https://github.com/buildbotics/rpipdi
 
