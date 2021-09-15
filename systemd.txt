@@ -1,0 +1,24 @@
+
+-->sudo nano /lib/systemd/system/myscript.service
+-->sudo chmod 644 /lib/systemd/myscript.service
+-->sudo systemctl daemon-reload
+
+-->sudo systemctl enable myscript.service
+-->reboot to start
+
+-->to check, sudo systemctl status myscript.service
+-->to save a log, after ExecStart add > /home/pi/myscript.log 2>&1
+
+
+[Unit]
+Description=My Script Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/sudo /usr/bin/python /home/pi/DongleProject/button.py
+WorkingDirectory=/home/pi/DongleProject
+User=pi
+
+[Install]
+WantedBy=multi-user.target
