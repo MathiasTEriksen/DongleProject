@@ -30,7 +30,7 @@ os.chdir('/home/pi/DongleProject/rpipdi')
 # button is set to be controlled by GPIO 2
 button = Button(6)
 # LED is controlled using GPIO 17, 18 (B not used)
-led = RGBLED(4, 18, 23)                                
+led = RGBLED(4, 17, 23)                                
 # wile true used to make infinite loop                                               
 while True:
     print ('Push the button to program')
