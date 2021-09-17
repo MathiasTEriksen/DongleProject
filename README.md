@@ -18,7 +18,7 @@ First, use the switch next to the battery port to power on the programmer.
 
 Once booted, the programmer will host a web server at psu-programmer.local, must be on Norbit Exrtra to access.
 At this site, you can upload a hex file that you want to write, or select proceed to continue to the activation page.
-At psu-programmer.local/Folder, you can select which file you want as the active write file that will be writen to the memory of the microcontroller.
+At psu-programmer.local/folder, you can select which file you want as the active write file that will be writen to the memory of the microcontroller.
 
 
 To use the programmer, simply insert the pins into the programming pins for the microcontroller and press the button.
