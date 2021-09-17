@@ -60,3 +60,10 @@ button.py is just a small script which listens for a button press and then excec
 
 This programmer uses systemd in order to run the upload.py and button.py scripts at boot.
 The services are named button.service and upload.service respectively.
+
+## wiring
+
+<img
+src="images/Wiring.jpg"
+style="width:400px;"
+/>
