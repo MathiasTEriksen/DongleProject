@@ -2,6 +2,33 @@
 
 PSU programming stick which can be used to program PSU boards on PCB boardstacks.
 
+<img
+src="images/FrontView.jpg"
+style="width:400px;"
+/>
+
+<img
+src="images/BackView.jpg"
+style="width:400px;"
+/>
+
+## Usage
+
+First, use the switch next to the battery port to power on the programmer.
+
+Once booted, the programmer will host a web server at psu-programmer.local, must be on Norbit Exrtra to access.
+At this site, you can upload a hex file that you want to write, or select proceed to continue to the activation page.
+At psu-programmer.local/Folder, you can select which file you want as the active write file that will be writen to the memory of the microcontroller.
+
+
+To use the programmer, simply insert the pins into the programming pins for the microcontroller and press the button.
+The programmer will pulse red and green while it is programming, and will shine green once the board is properly programmed.
+After the LED turns off, the programmer can be used again.
+
+The programmer must be inserted with the NORBIT logo facing away from the center of the board in order to work.
+
+Please turn off the switch when done using to preserve battery power.
+
 ## Interface
 
 The PSU boards on the PCB boardstacks rev6 and earlier use a PDI interface to program the microcontroller. This programming stick uses a raspberry pi zero in order to interface with the PDI interface, and write hexfiles into the memory of the microcontroller. The microcontroller on the PSU boards is an ATxMEGA 16e5, and the pinout is as follows (J10 on image):
@@ -29,3 +56,7 @@ upload.py creates a web page at psu-programmer.local which is used to upload hex
 
 button.py is just a small script which listens for a button press and then excecutes the ./rpipdi command in order to write the currently active file to the microcontrollers memory. It also powers on a LED which pulses red and green while programming a shines green for five seconds after successful programming. This script is in an endless loop, so after the LED shuts off, the stick can be used for programming again.
 
+## systemd
+
+This programmer uses systemd in order to run the upload.py and button.py scripts at boot.
+The services are named button.service and upload.service respectively.
